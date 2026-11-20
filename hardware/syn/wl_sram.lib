@@ -1,0 +1,151 @@
+/*
+ * Timing model of one world memory bank (wl_sram) for logic synthesis.
+ *
+ * GPDK045 has no SRAM compiler, so the bank is a black box in Genus and its area
+ * and power are taken from the SRAM assumptions instead (OpenRAM FreePDK45 macro area,
+ * CACTI read / write energy; see hardware/sram/results). This cell
+ * only gives the timing arcs so that paths into and out of the banks are checked
+ * against the clock. Area and power are deliberately 0 here and must not be read
+ * as SRAM figures.
+ *
+ * Assumed figures (slow corner of the logic, PVT_0P9V_125C):
+ *   clk -> rdata  2.0 ns   OpenRAM FreePDK45 1RW 4,096 word: 1.40 ns minimum period
+ *                          at TT 1.0 V 25 C (analytical model), about 1.4x slower at
+ *                          0.9 V 125 C, plus the macro select of a bank built from
+ *                          several macros
+ *   setup         0.3 ns   addr, en, we, wd before clk
+ *   hold          0.05 ns
+ *   rdata slew    0.2 ns   in the same convention as gsclib045 (30-70 % thresholds,
+ *                          slew_derate_from_library 0.5), i.e. like a strong buffer
+ * Pins and widths follow hardware/src/wl_sram.v as used by wl_accum
+ * (AW = 13, DW = BITS = 13, DEPTH = 6132).
+ */
+library (wl_sram_lib) {
+  delay_model : table_lookup;
+  time_unit : "1ns";
+  voltage_unit : "1V";
+  current_unit : "1mA";
+  capacitive_load_unit (1,pf);
+  pulling_resistance_unit : "1kohm";
+  leakage_power_unit : "1pW";
+  nom_process : 1;
+  nom_temperature : 125;
+  nom_voltage : 0.9;
+  operating_conditions (PVT_0P9V_125C) {
+    process : 1;
+    temperature : 125;
+    voltage : 0.9;
+  }
+  default_operating_conditions : PVT_0P9V_125C;
+  input_threshold_pct_rise : 50;
+  input_threshold_pct_fall : 50;
+  output_threshold_pct_rise : 50;
+  output_threshold_pct_fall : 50;
+  slew_lower_threshold_pct_rise : 30;
+  slew_upper_threshold_pct_rise : 70;
+  slew_lower_threshold_pct_fall : 30;
+  slew_upper_threshold_pct_fall : 70;
+  slew_derate_from_library : 0.5;
+  default_max_transition : 1.0;
+
+  type (bus13) {
+    base_type : array;
+    data_type : bit;
+    bit_width : 13;
+    bit_from : 12;
+    bit_to : 0;
+    downto : true;
+  }
+
+  cell (wl_sram) {
+    area : 0;
+    dont_use : true;
+    dont_touch : true;
+    interface_timing : true;
+
+    pin (clk) {
+      direction : input;
+      clock : true;
+      capacitance : 0.005;
+    }
+    pin (en) {
+      direction : input;
+      capacitance : 0.005;
+      timing () {
+        related_pin : "clk";
+        timing_type : setup_rising;
+        rise_constraint (scalar) { values ("0.3"); }
+        fall_constraint (scalar) { values ("0.3"); }
+      }
+      timing () {
+        related_pin : "clk";
+        timing_type : hold_rising;
+        rise_constraint (scalar) { values ("0.05"); }
+        fall_constraint (scalar) { values ("0.05"); }
+      }
+    }
+    pin (we) {
+      direction : input;
+      capacitance : 0.005;
+      timing () {
+        related_pin : "clk";
+        timing_type : setup_rising;
+        rise_constraint (scalar) { values ("0.3"); }
+        fall_constraint (scalar) { values ("0.3"); }
+      }
+      timing () {
+        related_pin : "clk";
+        timing_type : hold_rising;
+        rise_constraint (scalar) { values ("0.05"); }
+        fall_constraint (scalar) { values ("0.05"); }
+      }
+    }
+    bus (addr) {
+      bus_type : bus13;
+      direction : input;
+      capacitance : 0.005;
+      timing () {
+        related_pin : "clk";
+        timing_type : setup_rising;
+        rise_constraint (scalar) { values ("0.3"); }
+        fall_constraint (scalar) { values ("0.3"); }
+      }
+      timing () {
+        related_pin : "clk";
+        timing_type : hold_rising;
+        rise_constraint (scalar) { values ("0.05"); }
+        fall_constraint (scalar) { values ("0.05"); }
+      }
+    }
+    bus (wd) {
+      bus_type : bus13;
+      direction : input;
+      capacitance : 0.005;
+      timing () {
+        related_pin : "clk";
+        timing_type : setup_rising;
+        rise_constraint (scalar) { values ("0.3"); }
+        fall_constraint (scalar) { values ("0.3"); }
+      }
+      timing () {
+        related_pin : "clk";
+        timing_type : hold_rising;
+        rise_constraint (scalar) { values ("0.05"); }
+        fall_constraint (scalar) { values ("0.05"); }
+      }
+    }
+    bus (rdata) {
+      bus_type : bus13;
+      direction : output;
+      timing () {
+        related_pin : "clk";
+        timing_type : rising_edge;
+        timing_sense : non_unate;
+        cell_rise (scalar) { values ("2.0"); }
+        cell_fall (scalar) { values ("2.0"); }
+        rise_transition (scalar) { values ("0.2"); }
+        fall_transition (scalar) { values ("0.2"); }
+      }
+    }
+  }
+}

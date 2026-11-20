@@ -1,0 +1,4 @@
+# 장면 2 설정값(scene2_golden.py). 회전각은 2026-10-28_scene2/rotation.csv 와 같다
+cx = 460
+cy = 439
+alpha_deg = 0.000

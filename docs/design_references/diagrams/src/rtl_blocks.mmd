@@ -1,0 +1,36 @@
+flowchart LR
+    IN["MGROUP 워드<br/>32비트, valid/ready"] --> DEC
+    PH["프레임별 위상 φ<br/>16비트, valid/ready"] --> CORDIC
+
+    subgraph DEC["wl_decode"]
+        D1["워드 판별<br/>열 주소 · 이벤트 · 끝 표지"]
+        D2["작업 만들기<br/>COL x / GRP y0, 8비트 행 / BND"]
+        D1 --> D2
+    end
+
+    subgraph XF["wl_xform"]
+        CORDIC["wl_cordic<br/>16회 반복, 18클럭"] --> CS["cur · nxt<br/>(C, S)"]
+        S1["S1 곱셈 2개<br/>COL: C·dx, S·dx<br/>GRP: S·dy0, C·dy0"]
+        XR["Xu · Xv<br/>열마다 갱신"]
+        X["X 펼치기<br/>Bu · Bv, 한 클럭에 1행"]
+        E1["E1 u = Bu − k·S<br/>v = Bv + k·C"]
+        E2["E2 칸 · 범위 · 저장 영역<br/>(wx, wy)"]
+        CS --> S1
+        S1 --> XR
+        S1 --> X
+        XR --> X
+        X --> E1 --> E2
+    end
+
+    subgraph ACC["wl_accum"]
+        P["P 합치기<br/>같은 칸이면 개수 +1"]
+        R["R 뱅크 읽기<br/>쓰는 뱅크면 1클럭 대기"]
+        W["W 포화 +n, 쓰기"]
+        SRAM[("wl_sram × 16<br/>뱅크 {wy[1:0], wx[1:0]}<br/>6,132×13비트, 1RW")]
+        MAP["wl_region_map<br/>뱅크 안 주소"]
+        P --> MAP --> R --> SRAM --> W --> SRAM
+    end
+
+    D2 --> S1
+    E2 -->|"ev_ready"| P
+    RD["읽기 포트 · 지우기"] --> ACC

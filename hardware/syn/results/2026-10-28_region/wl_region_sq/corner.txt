@@ -1,0 +1,5 @@
+lib: /home/data/aiasic26402/worldlock/lib/gsclib045_all_v4.7/gsclib045/timing/slow_vdd1v0_basicCells.lib
+  nom_process : 1;
+  nom_temperature : 125;
+  nom_voltage : 0.9;
+  default_operating_conditions : PVT_0P9V_125C;

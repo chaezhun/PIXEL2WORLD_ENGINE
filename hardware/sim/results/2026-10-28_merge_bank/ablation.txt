@@ -1,0 +1,60 @@
+== CW=1 BK=1
+cycles 3958433 for 790602 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 84596 mean 98723 max 175230 (frame 14), over 39 frames
+sram 2848978 updates for 2848978 events (1.000 per event, merge width 1, 4 banks), 5697956 accesses, 1094896 stall cycles
+RESULT PASS
+== CW=2 BK=1
+cycles 3089504 for 790602 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 66694 mean 77075 max 135713 (frame 14), over 39 frames
+sram 2034040 updates for 2848978 events (0.714 per event, merge width 2, 4 banks), 4068080 accesses, 219630 stall cycles
+RESULT PASS
+== CW=3 BK=1
+cycles 3039698 for 790602 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 65695 mean 75833 max 133465 (frame 14), over 39 frames
+sram 1972725 updates for 2848978 events (0.692 per event, merge width 3, 4 banks), 3945450 accesses, 169546 stall cycles
+RESULT PASS
+== CW=4 BK=1
+cycles 3039698 for 790602 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 65695 mean 75833 max 133465 (frame 14), over 39 frames
+sram 1972725 updates for 2848978 events (0.692 per event, merge width 4, 4 banks), 3945450 accesses, 169546 stall cycles
+RESULT PASS
+== CW=1 BK=2
+cycles 3762249 for 790602 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 79688 mean 93827 max 167183 (frame 14), over 39 frames
+sram 2848978 updates for 2848978 events (1.000 per event, merge width 1, 16 banks), 5697956 accesses, 896997 stall cycles
+RESULT PASS
+== CW=2 BK=2
+cycles 2937736 for 790602 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 62898 mean 73284 max 129492 (frame 14), over 39 frames
+sram 2034044 updates for 2848978 events (0.714 per event, merge width 2, 16 banks), 4068088 accesses, 66465 stall cycles
+RESULT PASS
+== CW=3 BK=2
+cycles 2888024 for 790602 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 61904 mean 72043 max 127246 (frame 14), over 39 frames
+sram 1972729 updates for 2848978 events (0.692 per event, merge width 3, 16 banks), 3945458 accesses, 16475 stall cycles
+RESULT PASS
+== CW=4 BK=2
+cycles 2888024 for 790602 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 61904 mean 72043 max 127246 (frame 14), over 39 frames
+sram 1972729 updates for 2848978 events (0.692 per event, merge width 4, 16 banks), 3945458 accesses, 16475 stall cycles
+RESULT PASS
+== CW=1 BK=3
+cycles 3743201 for 790602 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 79306 mean 93348 max 166374 (frame 14), over 39 frames
+sram 2848978 updates for 2848978 events (1.000 per event, merge width 1, 64 banks), 5697956 accesses, 877753 stall cycles
+RESULT PASS
+== CW=2 BK=3
+cycles 2923058 for 790602 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 62588 mean 72915 max 128873 (frame 14), over 39 frames
+sram 2034044 updates for 2848978 events (0.714 per event, merge width 2, 64 banks), 4068088 accesses, 51621 stall cycles
+RESULT PASS
+== CW=3 BK=3
+cycles 2873362 for 790602 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 61595 mean 71674 max 126627 (frame 14), over 39 frames
+sram 1972729 updates for 2848978 events (0.692 per event, merge width 3, 64 banks), 3945458 accesses, 1647 stall cycles
+RESULT PASS
+== CW=4 BK=3
+cycles 2873362 for 790602 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 61595 mean 71674 max 126627 (frame 14), over 39 frames
+sram 1972729 updates for 2848978 events (0.692 per event, merge width 4, 64 banks), 3945458 accesses, 1647 stall cycles
+RESULT PASS

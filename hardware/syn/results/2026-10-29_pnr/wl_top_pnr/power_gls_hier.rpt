@@ -1,0 +1,153 @@
+*----------------------------------------------------------------------------------------
+*	Innovus 23.14-s088_1 (64bit) 02/28/2025 12:25 (Linux 3.10.0-693.el7.x86_64)
+*	
+*
+* 	Date & Time:	2026-Oct-29 00:10:29 (2026-Oct-28 15:10:29 GMT)
+*
+*----------------------------------------------------------------------------------------
+*
+*	Design: wl_top
+*
+*	Liberty Libraries used: 
+*	        view_setup: /home/data/aiasic26402/worldlock/hardware/syn/out/wl_top_pnr/wl_top.db/libs/mmmc/slow_vdd1v0_basicCells.lib
+*	        view_setup: /home/data/aiasic26402/worldlock/hardware/syn/out/wl_top_pnr/wl_top.db/libs/mmmc/wl_sram.lib
+*
+*	Power Domain used: 
+*              Rail:        VDD      Voltage:        0.9 
+*
+*       Power View : view_setup
+*
+*       User-Defined Activity : N.A.
+*
+*	Switching Activity File used: 
+*	        /home/data/aiasic26402/worldlock/hardware/syn/out/wl_top_pnr/wl_top.db/libs/power/wl_top_20k.vcd
+*                    Vcd Window used(Start Time, Stop Time):   
+*                     Vcd Scale Factor: 1 
+* *                    Design annotation coverage: 0/5928 = 100% 
+*	        vcd/wl_top_pnr_20k.vcd
+*                    Vcd Window used(Start Time, Stop Time):   
+*                     Vcd Scale Factor: 1 
+* *                    Design annotation coverage: 0/5928 = 100% 
+*            Total Design annotation coverage: 5928/5928 = 100% 
+*
+*       Hierarchical Global Activity: N.A.
+*
+*       Global Activity: N.A.
+*
+*       Sequential Element Activity: 0.200000
+*
+*       Primary Input Activity: 0.200000
+*
+*       Default icg ratio: N.A.
+*
+*       Global Comb ClockGate Ratio: N.A.
+*
+*	Power Units = 1mW
+*
+*	Time Units = 1e-09 secs 
+*
+*       report_power -outfile hardware/syn/out/wl_top_pnr/power_gls_hier.rpt -hierarchy all
+*
+-----------------------------------------------------------------------------------------
+
+
+Total Power 
+-----------------------------------------------------------------------------------------
+Total Internal Power:        0.29083858 	   48.9760%
+Total Switching Power:       0.30265279 	   50.9655%
+Total Leakage Power:         0.00034770 	    0.0586%
+Total Power:                 0.59383907 
+-----------------------------------------------------------------------------------------
+
+
+Group                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Sequential                        0.1325    0.007683   8.182e-05      0.1403       23.63 
+Macro                                  0     0.00223           0     0.00223      0.3755 
+IO                                     0           0           0           0           0 
+Combinational                    0.09234      0.2095   0.0002532      0.3021       50.88 
+Clock (Combinational)               0.04     0.06887   6.995e-06      0.1089       18.33 
+Clock (Sequential)               0.02596     0.01432   5.698e-06     0.04029       6.784 
+-----------------------------------------------------------------------------------------
+Total                             0.2908      0.3027   0.0003477      0.5938         100 
+-----------------------------------------------------------------------------------------
+
+
+Clock                           Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+clk                              0.06596     0.08319   1.269e-05      0.1492       25.12 
+-----------------------------------------------------------------------------------------
+Total (excluding duplicates)     0.06596     0.08319   1.269e-05      0.1492       25.12 
+-----------------------------------------------------------------------------------------
+Clock: clk
+Clock Period: 0.005000 usec 
+Clock Toggle Rate:   399.9900 Mhz 
+Clock Static Probability:  0.5000
+
+
+
+Rail                  Voltage   Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+Default                   0.9          0           0           0           0           0 
+VDD                       0.9     0.2908      0.3004   0.0003477      0.5916       99.62 
+
+
+Total Power 
+-----------------------------------------------------------------------------------------
+Total Internal Power:        0.29083858 	   48.9760%
+Total Switching Power:       0.30265279 	   50.9655%
+Total Leakage Power:         0.00034770 	    0.0586%
+Total Power:                 0.59383907 
+-----------------------------------------------------------------------------------------
+
+
+Hierarchy                       Internal   Switching     Leakage       Total  Percentage 
+                                Power      Power         Power         Power  (%)        
+-----------------------------------------------------------------------------------------
+u_acc                            0.08406         0.2   0.0001264      0.2842       47.85  
+u_dec                            0.03149     0.01231   2.093e-05     0.04382       7.379  
+u_xf                              0.1605     0.06718    0.000194      0.2279       38.38  
+u_xf/u_cordic                   0.005664           0   4.454e-05    0.005708      0.9613  
+u_acc/RC_CG_HIER_INST0          0.001667    0.001648   2.722e-07    0.003316      0.5583  
+u_acc/RC_CG_HIER_INST1          0.001018   0.0009954   1.581e-07    0.002014      0.3391  
+u_acc/RC_CG_HIER_INST2         0.0005208           0   1.526e-07   0.0005209     0.08773  
+u_acc/RC_CG_HIER_INST3         0.0008161    0.000491     1.2e-07    0.001307      0.2201  
+u_dec/RC_CG_HIER_INST7          0.001279   0.0008232   2.637e-07    0.002103      0.3541  
+u_dec/RC_CG_HIER_INST8          0.003762    0.005036   1.088e-06    0.008799       1.482  
+u_dec/RC_CG_HIER_INST9         0.0007255   0.0004228   1.193e-07    0.001148      0.1934  
+u_dec/RC_CG_HIER_INST10        0.0004129   1.166e-05   1.184e-07   0.0004246     0.07151  
+u_dec/RC_CG_HIER_INST11        0.0004018           0   1.184e-07    0.000402     0.06769  
+u_dec/RC_CG_HIER_INST12        0.0007202    0.000325   1.193e-07    0.001045       0.176  
+u_dec/RC_CG_HIER_INST22        0.0007251   0.0002879   1.193e-07    0.001013      0.1706  
+u_dec/RC_CG_HIER_INST23        0.0008163   0.0002133     1.2e-07     0.00103      0.1734  
+u_xf/RC_CG_HIER_INST13          0.003888    0.004104   7.497e-07    0.007993       1.346  
+u_xf/RC_CG_HIER_INST14          0.000728     0.00022   1.193e-07   0.0009482      0.1597  
+u_xf/RC_CG_HIER_INST15          0.001814   7.986e-05    5.75e-07    0.001894       0.319  
+u_xf/RC_CG_HIER_INST16         0.0008412           0   2.576e-07   0.0008415      0.1417  
+u_xf/RC_CG_HIER_INST17         0.0008412           0   2.576e-07   0.0008415      0.1417  
+u_xf/RC_CG_HIER_INST18         0.0009905           0   3.083e-07   0.0009908      0.1668  
+u_xf/RC_CG_HIER_INST19          0.001249    0.001661   1.858e-07     0.00291        0.49  
+u_xf/RC_CG_HIER_INST20          0.001838     0.00244   2.775e-07    0.004278      0.7204  
+u_xf/RC_CG_HIER_INST21         0.0008203   0.0006129   1.763e-07    0.001433      0.2414  
+u_acc/u_map                     0.003622    0.004291   1.804e-05    0.007931       1.336  
+u_xf/u_map                      0.001091    0.001357   5.539e-06    0.002453      0.4131  
+u_xf/u_cordic/RC_CG_DECLONE_HIER_INST
+                                0.002165           0   7.098e-07    0.002166      0.3647  
+u_xf/u_cordic/RC_CG_HIER_INST5
+                               0.0008412           0   2.576e-07   0.0008415      0.1417  
+
+
+-----------------------------------------------------------------------------------------
+*	Power Distribution Summary: 
+*                Highest Average Power: u_acc/CTS_ccl_a_buf_00005 (CLKBUFX20):          0.01046 
+*                Highest Leakage Power: u_xf/RC_CG_HIER_INST13/RC_CGIC_INST (TLATNTSCAX20):        7.471e-07 
+*          Total Cap:      2.62525e-11 F
+*          Total instances in design:  5339
+*          Total instances in design with no power:     0
+*          Total instances in design with no activity:     0
+*          Total Fillers and Decap:     0
+-----------------------------------------------------------------------------------------
+

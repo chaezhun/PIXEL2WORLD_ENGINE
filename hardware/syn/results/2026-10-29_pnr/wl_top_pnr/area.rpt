@@ -1,0 +1,32 @@
+    Hinst Name                           Module Name                   Inst Count           Total Area
+---------------------------------------------------------------------------------------------------
+wl_top                                                                       5339          2175604.956
+  u_acc                                  wl_accum_N352_M352_BITS13_CW4       1803          2166224.922
+    u_acc/RC_CG_HIER_INST0               RC_CG_MOD                              2                9.576
+    u_acc/RC_CG_HIER_INST1               RC_CG_MOD_1                            2                7.866
+    u_acc/RC_CG_HIER_INST2               RC_CG_MOD_2                            2                7.866
+    u_acc/RC_CG_HIER_INST3               RC_CG_MOD_3                            2                7.524
+    u_acc/u_map                          wl_region_map_288                    456              701.100
+  u_dec                                  wl_decode                            258              941.526
+    u_dec/RC_CG_HIER_INST10              RC_CG_MOD_10                           2                7.524
+    u_dec/RC_CG_HIER_INST11              RC_CG_MOD_11                           2                7.524
+    u_dec/RC_CG_HIER_INST12              RC_CG_MOD_12                           2                7.524
+    u_dec/RC_CG_HIER_INST22              RC_CG_MOD_22                           2                7.524
+    u_dec/RC_CG_HIER_INST23              RC_CG_MOD_682                          2                7.524
+    u_dec/RC_CG_HIER_INST7               RC_CG_MOD_7                            2                9.576
+    u_dec/RC_CG_HIER_INST8               RC_CG_MOD_8                            5               21.888
+    u_dec/RC_CG_HIER_INST9               RC_CG_MOD_9                            2                7.524
+  u_xf                                   wl_xform_N352_M352_WC704            3227             8329.068
+    u_xf/RC_CG_HIER_INST13               RC_CG_MOD_13                           2               16.074
+    u_xf/RC_CG_HIER_INST14               RC_CG_MOD_14                           2                7.524
+    u_xf/RC_CG_HIER_INST15               RC_CG_MOD_15                           2               14.022
+    u_xf/RC_CG_HIER_INST16               RC_CG_MOD_16                           2                9.576
+    u_xf/RC_CG_HIER_INST17               RC_CG_MOD_17                           2                9.576
+    u_xf/RC_CG_HIER_INST18               RC_CG_MOD_18                           2                9.918
+    u_xf/RC_CG_HIER_INST19               RC_CG_MOD_19                           2                8.208
+    u_xf/RC_CG_HIER_INST20               RC_CG_MOD_20                           2                9.576
+    u_xf/RC_CG_HIER_INST21               RC_CG_MOD_21                           3                9.234
+    u_xf/u_cordic                        wl_cordic                            767             1962.396
+      u_xf/u_cordic/RC_CG_DECLONE_HIER_INST RC_CG_MOD_4                            2               16.074
+      u_xf/u_cordic/RC_CG_HIER_INST5     RC_CG_MOD_5                            2                9.576
+    u_xf/u_map                           wl_region_map                        168              247.266

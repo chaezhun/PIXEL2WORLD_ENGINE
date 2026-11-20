@@ -1,0 +1,21 @@
+== whole scene 2, centre (460, 439), verilator
+loaded 24846614 words, 2056 phases, 123904 cells; centre (460, 439), gap 0
+cycles 77916855 for 24846614 words; frames 2056 (phases 2056); dropped 0
+cycles per frame: min 1204 mean 37915 max 81676 (frame 849), over 2055 frames
+sram 55829211 updates for 75329889 events (0.741 per event, merge width 4), 111658422 accesses, 1195564 stall cycles
+memory sum 75329889 max 7811, checked 123904 cells, mismatches 0
+RESULT PASS
+== whole scene 2, centre (460, 439), xsim
+loaded 24846614 words, 2056 phases, 123904 cells; centre (460, 439), gap 0
+cycles 77916856 for 24846614 words; frames 2056 (phases 2056); dropped 0
+cycles per frame: min 1204 mean 37915 max 81676 (frame 849), over 2055 frames
+sram 55829211 updates for 75329889 events (0.741 per event, merge width 4), 111658422 accesses, 1195564 stall cycles
+memory sum 75329889 max 7811, checked 123904 cells, mismatches 0
+RESULT PASS
+== scene 2 frames 600-639, centre (460, 439), verilator
+loaded 759347 words, 40 phases, 123904 cells; centre (460, 439), gap 0
+cycles 2717064 for 759347 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 66721 mean 67894 max 69641 (frame 2), over 39 frames
+sram 1864509 updates for 2676227 events (0.697 per event, merge width 4), 3729018 accesses, 15640 stall cycles
+memory sum 2676227 max 639, checked 123904 cells, mismatches 0
+RESULT PASS

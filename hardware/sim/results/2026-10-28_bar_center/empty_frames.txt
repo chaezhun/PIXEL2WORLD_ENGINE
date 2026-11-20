@@ -1,0 +1,14 @@
+== frames 500-539, five frames emptied (500 510 520 521 539), verilator
+loaded 692946 words, 40 phases, 123904 cells; centre (533, 418), gap 0
+cycles 2529494 for 692946 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 3 mean 64858 max 127209 (frame 14), over 39 frames
+sram 1726367 updates for 2495172 events (0.692 per event, merge width 4), 3452734 accesses, 14405 stall cycles
+memory sum 2495172 max 565, checked 123904 cells, mismatches 0
+RESULT PASS
+== frames 500-539, five frames emptied (500 510 520 521 539), xsim
+loaded 692946 words, 40 phases, 123904 cells; centre (533, 418), gap 0
+cycles 2529495 for 692946 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 3 mean 64858 max 127209 (frame 14), over 39 frames
+sram 1726367 updates for 2495172 events (0.692 per event, merge width 4), 3452734 accesses, 14405 stall cycles
+memory sum 2495172 max 565, checked 123904 cells, mismatches 0
+RESULT PASS

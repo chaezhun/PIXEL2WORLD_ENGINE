@@ -1,0 +1,83 @@
+== cordic, all phases, verilator
+phases 65536, mismatches 0
+RESULT PASS
+== cordic, all phases, xsim
+phases 65536, mismatches 0
+RESULT PASS
+== frames 500-539, verilator
+loaded 790602 words, 40 phases, 123904 cells; centre (533, 418), gap 0
+cycles 2888024 for 790602 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 61904 mean 72043 max 127246 (frame 14), over 39 frames
+sram 1972729 updates for 2848978 events (0.692 per event, merge width 4, 16 banks), 3945458 accesses, 16475 stall cycles
+memory sum 2848978 max 630, checked 123904 cells, mismatches 0
+RESULT PASS
+== frames 500-539, xsim
+loaded 790602 words, 40 phases, 123904 cells; centre (533, 418), gap 0
+cycles 2888025 for 790602 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 61904 mean 72043 max 127246 (frame 14), over 39 frames
+sram 1972729 updates for 2848978 events (0.692 per event, merge width 4, 16 banks), 3945458 accesses, 16475 stall cycles
+memory sum 2848978 max 630, checked 123904 cells, mismatches 0
+RESULT PASS
+== frames 500-539, 3 idle cycles per word
+loaded 790602 words, 40 phases, 123904 cells; centre (533, 418), gap 3
+cycles 3437445 for 790602 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 76307 mean 85811 max 148659 (frame 14), over 39 frames
+sram 1985711 updates for 2848978 events (0.697 per event, merge width 4, 16 banks), 3971422 accesses, 7956 stall cycles
+memory sum 2848978 max 630, checked 123904 cells, mismatches 0
+RESULT PASS
+== frames 500-539, 8-bit cells
+loaded 790602 words, 40 phases, 123904 cells; centre (533, 418), gap 0
+cycles 2888024 for 790602 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 61904 mean 72043 max 127246 (frame 14), over 39 frames
+sram 1972729 updates for 2848978 events (0.692 per event, merge width 4, 16 banks), 3945458 accesses, 16475 stall cycles
+memory sum 2717162 max 255, checked 123904 cells, mismatches 0
+RESULT PASS
+== frames 500-539, no merging
+loaded 790602 words, 40 phases, 123904 cells; centre (533, 418), gap 0
+cycles 3762249 for 790602 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 79688 mean 93827 max 167183 (frame 14), over 39 frames
+sram 2848978 updates for 2848978 events (1.000 per event, merge width 1, 16 banks), 5697956 accesses, 896997 stall cycles
+memory sum 2848978 max 630, checked 123904 cells, mismatches 0
+RESULT PASS
+== frames 500-539, merge width 2, 4 banks
+loaded 790602 words, 40 phases, 123904 cells; centre (533, 418), gap 0
+cycles 3089504 for 790602 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 66694 mean 77075 max 135713 (frame 14), over 39 frames
+sram 2034040 updates for 2848978 events (0.714 per event, merge width 2, 4 banks), 4068080 accesses, 219630 stall cycles
+memory sum 2848978 max 630, checked 123904 cells, mismatches 0
+RESULT PASS
+== frames 500-539, centre (40, 60)
+loaded 790602 words, 40 phases, 123904 cells; centre (40, 60), gap 0
+cycles 2882547 for 790602 words; frames 40 (phases 40); dropped 656001
+cycles per frame: min 61777 mean 71906 max 127074 (frame 14), over 39 frames
+sram 1479633 updates for 2192977 events (0.675 per event, merge width 4, 16 banks), 2959266 accesses, 10881 stall cycles
+memory sum 2192977 max 402, checked 123904 cells, mismatches 0
+RESULT PASS
+== scene 2 frames 0-39 from file start
+loaded 48167 words, 40 phases, 123904 cells; centre (480, 360), gap 0
+cycles 54588 for 48167 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 1276 mean 1364 max 1462 (frame 23), over 39 frames
+sram 32453 updates for 32545 events (0.997 per event, merge width 4, 16 banks), 64906 accesses, 884 stall cycles
+memory sum 32545 max 32, checked 123904 cells, mismatches 0
+RESULT PASS
+== whole scene 1, verilator
+loaded 27819433 words, 2052 phases, 123904 cells; centre (533, 418), gap 0
+cycles 90900754 for 27819433 words; frames 2052 (phases 2052); dropped 0
+cycles per frame: min 1704 mean 44320 max 127246 (frame 514), over 2051 frames
+sram 64024438 updates for 88075135 events (0.727 per event, merge width 4, 16 banks), 128048876 accesses, 1431622 stall cycles
+memory sum 88075135 max 11415, checked 123904 cells, mismatches 0
+RESULT PASS
+== whole scene 1, 10-bit cells
+loaded 27819433 words, 2052 phases, 123904 cells; centre (533, 418), gap 0
+cycles 90900754 for 27819433 words; frames 2052 (phases 2052); dropped 0
+cycles per frame: min 1704 mean 44320 max 127246 (frame 514), over 2051 frames
+sram 64024438 updates for 88075135 events (0.727 per event, merge width 4, 16 banks), 128048876 accesses, 1431622 stall cycles
+memory sum 49315664 max 1023, checked 123904 cells, mismatches 0
+RESULT PASS
+== whole scene 1, xsim
+loaded 27819433 words, 2052 phases, 123904 cells; centre (533, 418), gap 0
+cycles 90900755 for 27819433 words; frames 2052 (phases 2052); dropped 0
+cycles per frame: min 1704 mean 44320 max 127246 (frame 514), over 2051 frames
+sram 64024438 updates for 88075135 events (0.727 per event, merge width 4, 16 banks), 128048876 accesses, 1431622 stall cycles
+memory sum 88075135 max 11415, checked 123904 cells, mismatches 0
+RESULT PASS

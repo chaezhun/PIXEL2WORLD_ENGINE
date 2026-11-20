@@ -1,0 +1,5 @@
+loaded 790602 words, 40 phases, 123904 cells; centre (533, 418), gap 0
+cycles 2888258 for 790602 words; frames 40 (phases 40); dropped 0
+cycles per frame: min 61880 mean 72049 max 127209 (frame 14), over 39 frames
+memory sum 2848978 max 643, checked 123904 cells, mismatches 0
+RESULT PASS

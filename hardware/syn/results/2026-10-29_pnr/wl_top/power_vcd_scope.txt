@@ -1,0 +1,2 @@
+vcd vcd/wl_top_20k.vcd
+scope TOP/tb_worldlock/dut

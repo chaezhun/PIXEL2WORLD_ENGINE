@@ -1,0 +1,19 @@
+die  {0.0 0.0 1440.0 1850.79}
+core {20.0 19.95 1420.0 1830.84}
+std_cells 5323 area_um2 13070.6
+bank u_acc/g_bank[0].u_mem {30.0 30.21} mx
+bank u_acc/g_bank[1].u_mem {370.0 30.21} mx
+bank u_acc/g_bank[2].u_mem {750.0 30.21} r180
+bank u_acc/g_bank[3].u_mem {1090.0 30.21} r180
+bank u_acc/g_bank[4].u_mem {30.0 473.1} mx
+bank u_acc/g_bank[5].u_mem {370.0 473.1} mx
+bank u_acc/g_bank[6].u_mem {750.0 473.1} r180
+bank u_acc/g_bank[7].u_mem {1090.0 473.1} r180
+bank u_acc/g_bank[8].u_mem {30.0 955.32} r0
+bank u_acc/g_bank[9].u_mem {370.0 955.32} r0
+bank u_acc/g_bank[10].u_mem {750.0 955.32} my
+bank u_acc/g_bank[11].u_mem {1090.0 955.32} my
+bank u_acc/g_bank[12].u_mem {30.0 1398.21} r0
+bank u_acc/g_bank[13].u_mem {370.0 1398.21} r0
+bank u_acc/g_bank[14].u_mem {750.0 1398.21} my
+bank u_acc/g_bank[15].u_mem {1090.0 1398.21} my

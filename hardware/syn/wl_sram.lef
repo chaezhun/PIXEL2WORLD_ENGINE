@@ -1,0 +1,372 @@
+# Placeholder abstract of one world memory bank (wl_sram) for placement and routing.
+#
+# GPDK045 has no SRAM compiler, so the bank is a black box with the size of the SRAM
+# assumptions: OpenRAM 1.2.48 FreePDK45 1RW macros, one 4,096 word (200.60 x 405.67 um) beside
+# two stacked 1,024 word macros (117.98 x 210.63 um each), 13-bit words, 6,132 words in all.
+# The box is 320.00 x 422.37 um (247 standard cell rows). Only the outline, the signal pins and
+# routing obstructions on Metal1 to Metal4 are modelled; Metal5 and above may route over the bank.
+# There are no power pins and no real layout inside. Timing is in wl_sram.lib.
+#
+# All signal pins sit on the right edge near the lower corner, on Metal3, 1 um apart, so that a
+# bank flipped towards the middle of the die has its pins next to the logic.
+
+VERSION 5.8 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+MACRO wl_sram
+  CLASS BLOCK ;
+  ORIGIN 0 0 ;
+  FOREIGN wl_sram 0 0 ;
+  SIZE 320.00 BY 422.37 ;
+  SYMMETRY X Y ;
+  PIN clk
+    DIRECTION INPUT ;
+    USE CLOCK ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 1.95 320.00 2.05 ;
+    END
+  END clk
+  PIN en
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 2.95 320.00 3.05 ;
+    END
+  END en
+  PIN we
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 3.95 320.00 4.05 ;
+    END
+  END we
+  PIN addr[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 4.95 320.00 5.05 ;
+    END
+  END addr[0]
+  PIN addr[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 5.95 320.00 6.05 ;
+    END
+  END addr[1]
+  PIN addr[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 6.95 320.00 7.05 ;
+    END
+  END addr[2]
+  PIN addr[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 7.95 320.00 8.05 ;
+    END
+  END addr[3]
+  PIN addr[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 8.95 320.00 9.05 ;
+    END
+  END addr[4]
+  PIN addr[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 9.95 320.00 10.05 ;
+    END
+  END addr[5]
+  PIN addr[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 10.95 320.00 11.05 ;
+    END
+  END addr[6]
+  PIN addr[7]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 11.95 320.00 12.05 ;
+    END
+  END addr[7]
+  PIN addr[8]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 12.95 320.00 13.05 ;
+    END
+  END addr[8]
+  PIN addr[9]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 13.95 320.00 14.05 ;
+    END
+  END addr[9]
+  PIN addr[10]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 14.95 320.00 15.05 ;
+    END
+  END addr[10]
+  PIN addr[11]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 15.95 320.00 16.05 ;
+    END
+  END addr[11]
+  PIN addr[12]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 16.95 320.00 17.05 ;
+    END
+  END addr[12]
+  PIN wd[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 17.95 320.00 18.05 ;
+    END
+  END wd[0]
+  PIN wd[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 18.95 320.00 19.05 ;
+    END
+  END wd[1]
+  PIN wd[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 19.95 320.00 20.05 ;
+    END
+  END wd[2]
+  PIN wd[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 20.95 320.00 21.05 ;
+    END
+  END wd[3]
+  PIN wd[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 21.95 320.00 22.05 ;
+    END
+  END wd[4]
+  PIN wd[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 22.95 320.00 23.05 ;
+    END
+  END wd[5]
+  PIN wd[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 23.95 320.00 24.05 ;
+    END
+  END wd[6]
+  PIN wd[7]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 24.95 320.00 25.05 ;
+    END
+  END wd[7]
+  PIN wd[8]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 25.95 320.00 26.05 ;
+    END
+  END wd[8]
+  PIN wd[9]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 26.95 320.00 27.05 ;
+    END
+  END wd[9]
+  PIN wd[10]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 27.95 320.00 28.05 ;
+    END
+  END wd[10]
+  PIN wd[11]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 28.95 320.00 29.05 ;
+    END
+  END wd[11]
+  PIN wd[12]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 29.95 320.00 30.05 ;
+    END
+  END wd[12]
+  PIN rdata[0]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 30.95 320.00 31.05 ;
+    END
+  END rdata[0]
+  PIN rdata[1]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 31.95 320.00 32.05 ;
+    END
+  END rdata[1]
+  PIN rdata[2]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 32.95 320.00 33.05 ;
+    END
+  END rdata[2]
+  PIN rdata[3]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 33.95 320.00 34.05 ;
+    END
+  END rdata[3]
+  PIN rdata[4]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 34.95 320.00 35.05 ;
+    END
+  END rdata[4]
+  PIN rdata[5]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 35.95 320.00 36.05 ;
+    END
+  END rdata[5]
+  PIN rdata[6]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 36.95 320.00 37.05 ;
+    END
+  END rdata[6]
+  PIN rdata[7]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 37.95 320.00 38.05 ;
+    END
+  END rdata[7]
+  PIN rdata[8]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 38.95 320.00 39.05 ;
+    END
+  END rdata[8]
+  PIN rdata[9]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 39.95 320.00 40.05 ;
+    END
+  END rdata[9]
+  PIN rdata[10]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 40.95 320.00 41.05 ;
+    END
+  END rdata[10]
+  PIN rdata[11]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 41.95 320.00 42.05 ;
+    END
+  END rdata[11]
+  PIN rdata[12]
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 319.00 42.95 320.00 43.05 ;
+    END
+  END rdata[12]
+  OBS
+    LAYER Metal1 ;
+      RECT 0.00 0.00 320.00 422.37 ;
+    LAYER Metal2 ;
+      RECT 0.00 0.00 320.00 422.37 ;
+    LAYER Metal4 ;
+      RECT 0.00 0.00 320.00 422.37 ;
+    LAYER Metal3 ;
+      RECT 0.00 0.00 318.80 422.37 ;
+      RECT 318.80 44.00 320.00 422.37 ;
+  END
+END wl_sram
+
+END LIBRARY

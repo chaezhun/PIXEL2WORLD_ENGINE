@@ -1,0 +1,33 @@
+# build output
+build/
+__pycache__/
+*.pyc
+
+# simulator and tool output
+*.vcd
+*.vvp
+*.wlf
+*.jou
+*.log
+transcript
+work/
+obj_dir/
+xsim.dir/
+.Xil/
+
+# Vivado project scratch
+*.cache/
+*.hw/
+*.runs/
+*.sim/
+*.ip_user_files/
+
+# raw recordings and vendor SDK (not redistributable, ~100 MB per recording)
+software/datasets/
+software/delta_sdk/
+*.dvs
+*.h5
+
+# mermaid renderer scratch
+docs/**/.puppeteer.json
+docs/**/diagrams/.cache/

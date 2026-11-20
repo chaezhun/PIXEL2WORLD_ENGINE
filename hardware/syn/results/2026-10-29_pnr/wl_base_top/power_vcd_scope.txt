@@ -1,0 +1,2 @@
+vcd vcd/base_20k.vcd
+scope TOP/tb_base/dut
